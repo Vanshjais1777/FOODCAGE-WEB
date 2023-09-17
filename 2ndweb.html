@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOODCAGE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            color: rgb(35, 5, 5);
+            position: absolute;
+            background: url('./bg2.jpg') no-repeat center center/cover;
+            height: 100%;
+            width: 100%;
+            background-size: 1500px 1000px;
+            background-color: rgb(221, 139, 101);
+        }
+
+        .left {
+            display: inline-block;
+            position: absolute;
+            left: 34px;
+            top: 20px;
+        }
+
+        .mid {
+            display: block;
+            width: 34%;
+            margin: 20px auto;
+        }
+
+        .right {
+            position: absolute;
+            right: 34px;
+            top: 20px;
+            margin: 3px;
+            display: inline-block;
+        }
+
+        .navbar {
+            display: inline-block;
+            background-color: rgba(60, 24, 5, 0.750);
+            height: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.750);
+            border-radius: 5px;
+            width: 500px;
+            padding: 3px;
+            text-align: center;
+        }
+
+        .navbar li {
+            display: inline-block;
+            font-size: 19px;
+            text-align: center;
+        }
+
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+            padding: 34px 23px;
+            text-align: center;
+        }
+
+        .navbar li a:hover {
+            text-decoration: underline;
+            color: grey;
+        }
+
+
+        .left img {
+            width: 90px;
+            height: 90px;
+            margin: 4px;
+            opacity: 1;
+            border: 2px solid black;
+            border-radius: 4px
+        }
+
+        .left div {
+            text-align: center;
+            background-color: rgba(60, 24, 5, 0.750);
+            border: 1px solid rgba(255, 255, 255, 0.753);
+            border-radius: 2px;
+            padding: 3px;
+            color: white;
+
+        }
+
+        .btn {
+            margin: 18px 11px;
+            background-color: rgba(60, 24, 5, 0.968);
+            color: white;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: rgb(70, 64, 64);
+        }
+
+        .allmenu {
+            border: 0px solid red;
+            width: 523px;
+            margin: 75px;
+            height: 462px;
+            padding: 0px;
+            background-color: #bb683e;
+            border-radius: 33px;
+            position: fixed;
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 3px 105px;
+            height: 358px;
+        }
+
+        #home h1 {
+            color: rgb(18, 3, 3);
+            text-align: center;
+            font-family: 'Poltawski Nowy', serif;
+        }
+
+        #home p {
+            color: rgb(18, 3, 3);
+            text-align: center;
+            font-family: 'Bree Serif', serif;
+        }
+
+        .h-primary {
+            font-size: 2.8rem;
+            padding: 12px;
+            background-color: rgba(255, 255, 255, 0.400);
+            border: rgba(255, 255, 255, 0.639);
+            border-radius: 4px;
+        }
+
+        .h-oprimary {
+            font-size: 1.8rem;
+            padding: 17px;
+            background-color: rgb(18, 3, 3);
+            color: white;
+            display: block;
+            width: 1440px;
+            border: 2px solid white
+        }
+
+        .obtn {
+            padding: 6px 20px;
+            border: 2px solid white;
+            background-color: rgba(60, 24, 5);
+            color: white;
+            border-radius: 10px;
+            margin: 17px;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+        .obtn:hover {
+            background-color: rgb(70, 64, 64);
+        }
+
+        #services {
+            margin: 34px;
+            display: flex;
+        }
+
+        #services .box {
+            border: 4px solid rgb(104, 47, 11);
+            padding: 34px;
+            margin: 3px 6px;
+            border-radius: 23px;
+            width: 400px;
+            background-color: #ffffffef;
+            height: auto;
+        }
+
+        #services .box img {
+            height: 200px;
+            display: block;
+            margin: auto;
+            border: 2px solid rgb(104, 47, 11);
+            border-radius: 50px;
+            padding: 50px;
+            background-color: rgb(247, 244, 241);
+        }
+
+        #services .box li {
+            font-size: 25px;
+            font-style: oblique;
+        }
+
+        #services .box .location {
+            padding: 20pxpx 20px;
+            border: 2px solid rgba(60, 24, 5);
+            background-color: rgba(60, 24, 5);
+            color: white;
+            border-radius: 5px;
+            margin: 89px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            height: 60px;
+            width: 180px;
+        }
+
+        #services .box .location:hover {
+            background-color: rgb(70, 64, 64);
+        }
+
+        #services .box div {
+            font-size: 25px;
+            font-style: oblique;
+        }
+
+        #media {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #media-section {
+            height: 40px;
+            position: relative;
+            border: 3px solid rgb(42, 11, 3);
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            width: 1450px;
+            height: 100px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #media img {
+            height: 50px;
+        }
+
+        .media-item {
+            padding: 28px;
+        }
+        footer{
+            background-color: black;
+            color: white;
+            padding: 9px 20px;
+            display: flex;
+            border: 2px solid white;
+            border-radius: 4px;
+        }
+    </style>
+
+<body>
+    <header class="header">
+
+        <div class="left">
+            <img src="logo.png" alt="">
+            <div>FOODCAGE</div>
+        </div>
+
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <button class="btn">Call Us Now</button>
+            <button class="btn">Email Us</button>
+        </div>
+
+    </header>
+
+    <section id="home">
+        <h1 class="h-primary">Welcome To FOODCAGE</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic dolores quis aspernatur laudantium aut et.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <button class="obtn">ORDER NOW</button>
+    </section>
+
+    <section id="services-container">
+        <h1 class="h-oprimary center">Our Services -</h1>
+        <div id="services">
+
+            <div class="box">
+                <img src="menu.png" alt="">
+                <h2 class="h-scondary center"><strong>Menu</strong></h2>
+                <p class="center">
+                <ul>
+                    <li>Paneer Butter Masala @259</li>
+                    <li>Butter Naan @49</li>
+                    <li>Mushroom Butter Masala @199</li>
+                    <li>Garlic Naan @49</li>
+                    <li>Fried Rice @139</li>
+                    <li>Water Bottle @25</li>
+                </ul>
+                <button class="location">MENU</button>
+                </p>
+            </div>
+
+            <div class="box">
+                <img src="book.png" alt="">
+                <h2 class="h-scondary center"><strong>BOOKING</strong></h2>
+                <p class="center">
+                <ul>
+                    <li>10 People @3000</li>
+                    <li>30 People @10000 </li>
+                    <li>50 People @15000</li>
+                    <li>100 People @30000</li>
+                    <li>Engagement Purpose @60000</li>
+                    <li>Wedding Purpose @100000</li>
+                </ul>
+                <button class="location">BOOK NOW</button>
+                </p>
+            </div>
+
+            <div class="box">
+                <img src="delivery.png" alt="">
+                <h2 class="h-scondary center"><strong>FOOD DELIVERY</strong></h2>
+                <p class="center">
+                <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat cumque distinctio unde fugit
+                    debitis dignissimos, rerum voluptas quisquam qui aperiam, nihil eligendi quidem dolor suscipit error
+                    nobis sapiente similique nemo.</div>
+                <button class="location">LOCATE ME</button>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="media-section">
+
+        <div id="media">
+            <div class="media-item">
+                <img src="ig.png" alt="Instagram">
+            </div>
+
+            <div class="media-item">
+                <img src="fb.png" alt="facebook">
+            </div>
+
+            <div class="media-item">
+                <img src="twitter.png" alt="twitter">
+            </div>
+
+            <div class="media-item">
+                <img src="whatsaap.png" alt="whatsaap">
+            </div>
+
+            <div class="media-item">
+                <img src="yt.png" alt="youtube">
+            </div>
+            
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="center">
+            copyright &copy; www.foodcagegkp.com. All rights reserved! &nbsp; &nbsp; &nbsp; &nbsp; Underground Floor, City Centre, Buxipur, GORAKHPUR, UTTARPRADESH-273001.
+        </div>
+
+    </footer>
+</body>
+
+</html> 
